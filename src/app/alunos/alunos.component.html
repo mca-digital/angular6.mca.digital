@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-12">
+        <h1 class="text-left">
+            Alunos
+        </h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">View</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let aluno of alunos">
+                    <th scope="row">{{aluno?.id}}</th>
+                    <td>{{aluno?.nome}}</td>
+                    <td><a [routerLink]="[aluno.id]">view</a></td>
+                    <td><a [routerLink]="[aluno.id+'/editar']">edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-6">
+        <router-outlet></router-outlet>
+    </div>
+</div>

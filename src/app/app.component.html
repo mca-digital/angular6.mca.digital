@@ -1,0 +1,29 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">{{title}}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav" *ngIf="mostrarMenu">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="">Home</a>
+                    <!-- <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" routerLink="/alunos">Alunos</a>
+                </li>
+            </ul>
+            <a class="btn btn-outline-info ml-2 my-2 my-sm-0" routerLink="/login" *ngIf="!mostrarMenu">Login</a>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+    <div class="container-fluid">
+        <router-outlet></router-outlet>
+    </div>    
+</main>

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-12 mt-2">
+        <h4 class="text-left">
+            Cursos
+        </h4>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let curso of cursos">
+                <a [routerLink]="['/cursos',curso.id]">{{curso?.nome}}</a>
+            </li>
+        </ul>    
+        <div class="text-center">
+            <a (click)="paginaAnterior()" class="btn btn-primary">Página Anterior</a>
+            <a (click)="proximaPagina()" class="btn btn-primary">Proxima Página</a>            
+            <br>
+            Página {{pagina}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="row">
+		<div class="col-12">
+			<h2 class="text-left">
+				Aluno Form
+			</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col" colspan="3">Editar Dados</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">ID</th>
+						<td><input type="text" class="form-control" [(ngModel)]="aluno.id"></td>
+					</tr>
+					<tr>
+						<th scope="row">NOME</th>
+						<td><input type="text" class="form-control" [(ngModel)]="aluno.nome" (input)="onInput()"></td>
+					</tr>
+					<tr>
+						<th scope="row">EMAIL</th>
+						<td><input type="text" class="form-control" [(ngModel)]="aluno.email" id="email"></td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+				
+		</div>
+	</div>
+	

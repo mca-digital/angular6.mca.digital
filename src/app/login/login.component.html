@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class="text-left">Login</h2>
+        <div class="form-signin">
+            <label for="usuario" class="sr-only" style="margin-top:5px;">Email address</label>
+            <input [(ngModel)]="usuario.nome" type="text" id="usuario" class="form-control" placeholder="Email address" required autofocus style="margin:5px 0 5px 0;">
+            <label for="password" class="sr-only">Password</label>
+            <input [(ngModel)]="usuario.senha" type="password" id="password" class="form-control" placeholder="Password" required style="margin-bottom:5px;">
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="fazerLogin()">Sign in</button>
+        </div>
+    </div>
+</div>

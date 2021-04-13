@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-12">
+        <h2 class=" text-left">
+            Aluno Detalhe
+        </h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="3">Visualizar Dados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">ID</th>
+                    <td>{{aluno?.id}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">NOME</th>
+                    <td>{{aluno?.nome}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">EMAIL</th>
+                    <td>{{aluno?.email}}</td>
+                </tr>
+                <tr>
+                    <th scope="row" colspan="2">
+                        <button (click)="editarContato()" type="button" class="btn btn-primary">Editar</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+            
+    </div>
+</div>
